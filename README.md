@@ -6,8 +6,7 @@
         <th>Light</th>
     </tr>
     <tr>
-        <td>
-<img src="./public/Mobile_Dark.jpg" width="200" alt="Dark"></td>
+        <td><img src="./public/Mobile_Dark.jpg" width="200" alt="Dark"></td>
         <td><img src="./public/Mobile_Light.jpg" width="200" alt="Light"></td>
     </tr>
 </table>
