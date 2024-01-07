@@ -1,5 +1,9 @@
 <script setup>
 import { ref } from 'vue'
+import ButtonNumber from './components/ButtonNumber.vue'
+import ButtonSymbol from './components/ButtonSymbol.vue'
+import ButtonEqual from './components/ButtonEqual.vue'
+
 const input = ref('')
 const output = ref('')
 const calculated = ref(false)
@@ -55,33 +59,33 @@ const equal = () => {
       </div>
     </div>
     <div class="flex gap-3 p-2">
-      <div class="btn btn-outline btn-warning size-16 text-3xl" @click="clear">CE</div>
-      <div class="btn btn-outline btn-warning size-16 text-3xl" @click="cancel">&larr;</div>
-      <div class="btn btn-outline btn-warning size-16 text-3xl" @click="enter('%')">%</div>
-      <div class="btn btn-outline btn-warning size-16 text-3xl" @click="enter('/')">/</div>
+      <ButtonSymbol @click="clear" symbol="CE" />
+      <ButtonSymbol @click="cancel" symbol="C" />
+      <ButtonSymbol @click="enter('%')" symbol="%" />
+      <ButtonSymbol @click="enter('/')" symbol="/" />
     </div> 
     <div class="flex gap-3 p-2">
-      <div class="btn size-16 text-3xl" @click="enter(7)">7</div>
-      <div class="btn size-16 text-3xl" @click="enter(8)">8</div>
-      <div class="btn size-16 text-3xl" @click="enter(9)">9</div>
-      <div class="btn btn-outline btn-warning size-16 text-3xl" @click="enter('*')">*</div>
+      <ButtonNumber @click="enter(7)" number="7" />
+      <ButtonNumber @click="enter(8)" number="8" />
+      <ButtonNumber @click="enter(9)" number="9" />
+      <ButtonSymbol @click="enter('*')" symbol="x" />
     </div>
     <div class="flex gap-3 p-2">
-      <div class="btn size-16 text-3xl" @click="enter(4)">4</div>
-      <div class="btn size-16 text-3xl" @click="enter(5)">5</div>
-      <div class="btn size-16 text-3xl" @click="enter(6)">6</div>
-      <div class="btn btn-outline btn-warning size-16 text-3xl" @click="enter('-')">-</div>
+      <ButtonNumber @click="enter(4)" number="4" />
+      <ButtonNumber @click="enter(5)" number="5" />
+      <ButtonNumber @click="enter(6)" number="6" />
+      <ButtonSymbol @click="enter('-')" symbol="-" />
     </div>
     <div class="flex gap-3 p-2">
-      <div class="btn size-16 text-3xl" @click="enter(1)">1</div>
-      <div class="btn size-16 text-3xl" @click="enter(2)">2</div>
-      <div class="btn size-16 text-3xl" @click="enter(3)">3</div>
-      <div class="btn btn-outline btn-warning size-16 text-3xl" @click="enter('+')">+</div>
+      <ButtonNumber @click="enter(1)" number="1" />
+      <ButtonNumber @click="enter(2)" number="2" />
+      <ButtonNumber @click="enter(3)" number="3" />
+      <ButtonSymbol @click="enter('+')" symbol="+" />
     </div>
     <div class="flex gap-3 p-2">
-      <div class="btn size-16 text-3xl" @click="enter(0)">0</div>
-      <div class="btn size-16 text-3xl" @click="enter('.')">.</div>
-      <div class="btn btn-outline btn-warning size-16 w-36 text-3xl" @click="equal">=</div>
+      <ButtonSymbol @click="enter('.')" symbol="." />
+      <ButtonNumber @click="enter(0)" number="0" />
+      <ButtonEqual @click="equal" symbol="=" />
     </div>
   </div>
 </template>
