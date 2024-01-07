@@ -1,11 +1,16 @@
 # vue-calculator
 
-## Mobile Dark
-![vue-calculator](./public/Mobile_Dark.jpg "Dark")
-
-## Mobile Light
-![vue-calculator](./public/Mobile_Light.jpg "Light")
-
+<table>
+    <tr>
+        <th>Dark</th>
+        <th>Light</th>
+    </tr>
+    <tr>
+        <td>
+<img src="./public/Mobile_Dark.jpg" width="200" alt="Dark"></td>
+        <td><img src="./public/Mobile_Light.jpg" width="200" alt="Light"></td>
+    </tr>
+</table>
 
 This template should help get you started developing with Vue 3 in Vite.
 
